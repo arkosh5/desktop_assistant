@@ -19,42 +19,24 @@ A desktop assistant can perform a single task or a variety of tasks, depending o
 more advanced your assistant is, the more impressive it will be to potential employers. """
 import getpass
 import re
-import socket
 
 import cv2
 # Importing the required modules
 import pyttsx3
 import datetime
-
-import quotes as quotes
-import wikipedia
 import webbrowser
 import os
 import smtplib
-import pywhatkit
 import pyjokes
 import requests
-import json
-import wolframalpha
 import subprocess
 import sys
 import time
 import pyautogui
-import random
-import winshell
 import ctypes
-import win32com.client as wincl
-import win32api
-import win32con
-import win32gui
-import win32process
-import win32event
-import win32security
-import win32com.client
 import speech_recognition as sr
 import randfacts as facts
 from bs4 import BeautifulSoup
-from cv2 import *
 
 engine = pyttsx3.init()  # Initializing the engine for the voice
 rate = engine.getProperty('rate')  # Set the length of each statement
@@ -257,23 +239,6 @@ def possibleCommands():
 
         elif 'open file manager' in query:
             subprocess.Popen(['explorer.exe'])
-
-        elif 'what does your name mean' in query:
-            speak('My name means Joyful, Happy, Cheerful, Lively, Pleasant, Amusing, Funny, Jolly')
-
-        elif 'your name is Sarah' in query:
-            speak('Yes. I am Sarah')
-
-        elif 'what is your name' in query:
-            speak('My name is Sarah')
-
-        elif 'what is your age' in query:
-            speak('I am 1 year old')
-            engine.say('I am 1 year old')
-
-        elif 'what is your favourite colour' in query:
-            speak('My favourite colour is blue')
-            engine.say('My favourite colour is blue')
 
         elif 'open google maps' in query:
             webbrowser.open('https://www.google.com/maps')
